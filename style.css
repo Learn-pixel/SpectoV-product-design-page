@@ -1,0 +1,589 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background gradient simulating lenses */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at center, #0d0d0d, #414040, #272626, #000000, #1d1d1d);
+  color: #00d9ff;
+  max-height: 900px;
+  
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 ;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.Logo {
+  display: flex;
+  width: 140px;
+  height: 100px;
+  opacity: 60%;
+}
+
+.Logo img {
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+.Logo span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+nav a {
+  color: #00d9ff;
+  opacity: 70%;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #3fe2a5;
+}
+
+/*Hero video section*/
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.hero-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.5); 
+}
+
+.video-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.video-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.video-text p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  height: 60vh;
+  text-align: center;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+/* Button styling */
+/* #sticky-wrapper {
+  position: -webkit-sticky; 
+  position: sticky;
+  bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  z-index: 9999;
+} */
+
+.cta-button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #00ffd5, #007cf0);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0 25px rgba(0, 255, 213, 0.6);
+  transition: all 0.4s ease;
+}
+
+.cta-button:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 213, 0.8), 0 0 60px rgba(0, 255, 213, 0.4);
+  transform: scale(1.05);
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180%;
+  height: 180%;
+  background: radial-gradient(circle, rgba(0, 255, 213, 0.3), transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  animation: haloPulse 2.5s infinite ease-out;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+@keyframes haloPulse {
+  25% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.25);
+    opacity: 0.8;
+  }
+  75%{
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+}
+
+/* .sticky-button {
+  position: fixed !important;
+  bottom: 20px;
+  right: 20px;
+} */
+
+.countdown-container {
+  text-align: center;
+  margin-top: 20px;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px rgba(0, 255, 170, 0.1);
+  color: #f0f0f0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.countdown-title {
+  font-size: 1.5rem;
+  color: #2fbabf;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#countdown div {
+  background-color: #1e1e1e;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #2a2a2a;
+  text-align: center;
+  min-width: 60px;
+}
+
+#countdown span {
+  display: block;
+}
+
+#countdown .label {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+#countdown span:first-child {
+  font-size: 1.8rem;
+  color: #00ffee;
+}
+
+/* Story section */
+.story-section {
+  padding: 4rem 2rem;
+}
+
+.story-container {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  gap: 4rem;
+}
+
+.sticky-image {
+  flex: 1;
+  position: sticky;
+  top: 120px;
+  align-self: flex-start;
+}
+
+.sticky-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.story-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.story-block {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: calc(var(--i, 0) * 0.3s);
+}
+
+.story-block:nth-child(1) { --i: 1; }
+.story-block:nth-child(2) { --i: 2; }
+.story-block:nth-child(3) { --i: 3; }
+.story-block:nth-child(4) { --i: 4; }
+.story-block:nth-child(5) { --i: 5; }
+.story-block:nth-child(6) { --i: 6; }
+
+.story-block h2 {
+  font-size: 1.8rem;
+  color: #00bcd4;
+}
+
+.story-block p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.specs ul {
+  list-style: none;
+  padding: 0;
+}
+
+.specs li {
+  margin: 0.5rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.specs li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .story-container {
+    flex-direction: column;
+  }
+
+  .sticky-image {
+    position: relative;
+    top: auto;
+  }
+}
+
+/* USP Section Styling */
+.usp-section {
+  background-color: #0f0f0f;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.usp-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.usp-section .highlight {
+  color: #00bfff;
+}
+
+.usp-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.usp-card {
+  background-color: #1e1e1e;
+  padding: 25px;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 0 transparent;
+}
+
+.usp-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+}
+
+.usp-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.usp-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.usp-card p {
+  color: #cccccc;
+  font-size: 0.95rem;
+}
+
+/* Return policy section */
+
+.guarantee-section {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #1a1a1a, #121212);
+  text-align: center;
+  color: #fff;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00bfff;
+  text-shadow: 0 0 8px #00bfff88;
+}
+
+.guarantee-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.guarantee-card {
+  background: #1f1f1f;
+  border: 1px solid #00bfff40;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 300px;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guarantee-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.4);
+}
+
+.guarantee-card img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.guarantee-card h3 {
+  color: #00bfff;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.guarantee-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* Pricin Plan Section */
+.pricing-section {
+  padding: 80px 20px;
+  background: #0d0d0d;
+  color: #f0f0f0;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.pricing-title {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  color: #00eaff;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.pricing-card {
+  position: relative;
+  background: linear-gradient(145deg, #1a1a1a, #292929);
+  border: 1px solid #ffffff22;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 300px;
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(0, 234, 255, 0.3);
+}
+
+.highlight {
+  background: linear-gradient(145deg, #002c57, #00557d);
+  border: 2px solid #00eaff;
+}
+
+.badge {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #00eaff;
+  color: black;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00eaff;
+}
+
+.pricing-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #00eaff;
+}
+
+.pricing-card i {
+  margin-right: 8px;
+  color: #00eaff;
+}
+
+.price {
+  font-size: 2rem;
+  margin: 10px 0 25px;
+  font-weight: bold;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.pricing-card ul li {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.pricing-card button {
+  padding: 12px 24px;
+  background: #00eaff;
+  color: #0d0d0d;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.pricing-card button:hover {
+  background: #00c0d6;
+  transform: scale(1.05);
+}
+
+/* Testimonial section */
+.testimonials-section {
+  padding: 60px 20px;
+  background-color: #0a0a0a;
+  color: #376b79;
+  text-align: center;
+}
+
+.testimonial-heading {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #08f2f2;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0 0 15px rgba(0, 255, 170, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(0, 221, 255, 0.518);
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.testimonial-rating i {
+  color: #f5c518;
+  margin: 0 2px;
+}
+
+.testimonial-author {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #6bc9d9ac;
+}
