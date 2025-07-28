@@ -20,4 +20,4 @@ While the original website had engaging features like the rotatable product view
 
 In the next 6–7 hours, I focused on creating a user-first design that told a story. I added structured sections, trust signals like testimonials, subtle animations for flow, and a countdown timer to build urgency. My goal was to guide the user step-by-step with clarity and confidence. Throughout, I made every decision with the user’s mindset in focus—what would they feel, what would they need, and what would make them stay?
 
-This experience taught me to take initiative, empathize with users, and own my mistakes. Even if I’m not shortlisted, I’m grateful to SpectoV for turning a missed opportunity into one of my most valuable learning moments as a budding UI/UX designer.
+Though I understand that I may not be shortlisted, I see this challenge as an invaluable opportunity. I took responsibility for my delay, refused to give up, and turned a missed opportunity into a meaningful learning experience. I'm genuinely thankful to SpectoV for this chance to grow—not just as a UI/UX designer, but as someone learning to take initiative, empathize with users, and deliver under pressure.
