@@ -1,4 +1,4 @@
-# SpectoV Product Design Page
+# SpectoV Product Redesign Page
 
 This is a responsive webpage designed for DefXV AR/VR glasses product using HTML, CSS, and JavaScript.
 
